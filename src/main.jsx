@@ -7,6 +7,7 @@ import AboutUs from './AboutUs.jsx';
 import ContactUs from './ContactUs.jsx';
 import Counter from './Counter.jsx';
 import Error from './Error.jsx';
+import Post from './Post.jsx';
 const Router = createBrowserRouter([
   {
     path:"/",
@@ -32,6 +33,11 @@ const Router = createBrowserRouter([
     path:"/counter",
     element:<Counter/>,
     errorElement:<Error/>
+  },
+  {
+    path:"/post/:id",
+    element:<Post/>,
+    errorElement:<Error/>,
   }
 ]);
 createRoot(document.getElementById('root')).render(
